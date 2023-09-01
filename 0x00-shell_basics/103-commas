@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -a1p | sed -e '/\/$/!s/$/,/' -e '/\/$/s/$/\//' -e 's/\.\.\///' -e 's/^\.\///' | LC_COLLATE=C sort -df | tr -d '\n' && echo
+(ls -ap | sed -e '/\/$/!s/$/,/' -e '/\/$/s/$/\//' -e 's/\.\.\///' -e 's/^\.\///'; echo) | LC_COLLATE=C sort -df | tr -d '\n'
